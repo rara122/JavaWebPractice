@@ -1,0 +1,2 @@
+INDEX VERSION 1.129+/Volumes/C/Code/Java/Projects/.metadata/.plugins/org.eclipse.jdt.core
+3260771214.index
