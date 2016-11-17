@@ -68,3 +68,12 @@ Binding(ALT+COMMAND+Q P,
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2016-11-17 16:16:13.753
 !MESSAGE Setup tasks were performed during startup updating 4 preferences. See '/Applications/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.oomph.setup/setup.log' for details
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2016-11-17 16:19:47.204
+!MESSAGE Several ports (8080, 8009) required by Tomcat v7.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-17 16:20:20.748
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2016-11-17 16:20:20.754
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
