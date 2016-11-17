@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="java.io.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,6 +9,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-<b><% out.println("Hey World!"); %></b>
+	<b> <%
+ 	out.print("Hey World!");
+ %>
+	</b>
+	<br />
+	<%
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet results = null;
+		String url = "jdbc:sqlserver://JYOO-WIN10\\SQLEXPRESS;databaseName=WebApiTest";
+
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			connection = DriverManager.getConnection(url);
+			
+		} catch (SQLException e) {
+			out.println("SqlException Thrown!");
+		}
+	%>
 </body>
 </html>
