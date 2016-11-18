@@ -18,9 +18,9 @@
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet results = null;
-		String url = "jdbc:sqlserver://JYOO-WIN10\\SQLEXPRESS;databaseName=SiemensQuotingStaging3";
+		String url = "jdbc:sqlserver://demandgenerationseries.com;databaseName=SiemensQuotingStaging3";
 		String userName = "Jyoo";
-		String password = "Intentionally Left Blank";
+		String password = "Rara122!";
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			connection = DriverManager.getConnection(url, userName, password);

@@ -18,14 +18,15 @@
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet results = null;
-		String url = "jdbc:sqlserver://JYOO-WIN10\\SQLEXPRESS;databaseName=WebApiTest";
-
+		String url = "jdbc:sqlserver://JYOO-WIN10\\SQLEXPRESS;databaseName=SiemensQuotingStaging3";
+		String userName = "Jyoo";
+		String password = "Intentionally Left Blank";
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			connection = DriverManager.getConnection(url);
-			
+			connection = DriverManager.getConnection(url, userName, password);
+			out.println("SUCCESS!!!!!!");
 		} catch (SQLException e) {
-			out.println("SqlException Thrown!");
+			out.println(e);
 		}
 	%>
 </body>
