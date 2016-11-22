@@ -18,13 +18,28 @@
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet results = null;
-		String url = "jdbc:sqlserver://JYOO-WIN10\\SQLEXPRESS;databaseName=SiemensQuotingStaging3";
-		String userName = "Jyoo";
+		String url = "jdbc:sqlserver://dev2.market-sense.com;databaseName=SiemensDev";
+		String userName = "siemensweb";
 		String password = "Intentionally Left Blank";
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			connection = DriverManager.getConnection(url, userName, password);
-			out.println("SUCCESS!!!!!!");
+			out.println("Successfully connected to the database: SiemensDev");
+	%>
+	<br />
+	<%
+		statement = connection.createStatement();
+			String s = "SELECT TOP 1 * FROM dbo.People WHERE [Id] = 295";
+			results = statement.executeQuery(s);
+
+			if (results != null) {
+				out.println("Congrats! You are a peoples!");
+			}
+			
+			while(results.next()){
+				out.println("Your peoples name is " + results.getString("FirstName") + ".");
+			}
+
 		} catch (SQLException e) {
 			out.println(e);
 		}
